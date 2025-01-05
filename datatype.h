@@ -1,6 +1,6 @@
 
-#define SIZE 5000
-#define ARRAY_SIZE 30000
+#define SIZE 5000*(12000/80)
+#define ARRAY_SIZE 1000
 
 typedef struct
 {

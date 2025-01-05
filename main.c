@@ -22,6 +22,8 @@ void main()
         array1[i].data = ARRAY_SIZE-i;
     }
 
+    float startTime = (float)clock()/CLOCKS_PER_SEC;
+
     #ifdef SA
         //copy over data to small array
         for(int i = 0; i < ARRAY_SIZE; i++)
@@ -41,6 +43,10 @@ void main()
             array2[i].data = array1[i].data;
         }
     #endif
+
+    float endTime = (float)clock()/CLOCKS_PER_SEC;
+
+    printf("time elapsed %f\n", endTime - startTime);
 
     srand ( time(NULL) );
     int index = rand() % ARRAY_SIZE;
